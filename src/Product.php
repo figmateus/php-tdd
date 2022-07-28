@@ -2,7 +2,7 @@
 
 namespace Code;
 
-class Produto {
+class Product {
 
     private $name;
     private $price;
