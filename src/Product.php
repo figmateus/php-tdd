@@ -2,6 +2,8 @@
 
 namespace Code;
 
+use http\Exception\InvalidArgumentException;
+
 class Product {
 
     private $name;
@@ -35,6 +37,9 @@ class Product {
 
     public function setSlug($slug): void
     {
+        if(!$slug){
+            throw new \InvalidArgumentException('Slug do produto não pode ser nulo');
+        }
         $this->slug = $slug;
     }
 }
